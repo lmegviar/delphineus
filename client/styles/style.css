@@ -217,9 +217,17 @@ md-progress-linear {
   margin: 12px 17px;
   font-size: 24px;
   color: #A9A9A9;
+  display: inline-block;
+  position: relative;
 }
 
 .fa-lock {
   font-size: 27px;
   margin-right: 8px;
+}
+
+.adminSearch {
+  display: inline-block;
+  position: relative;
+  margin-left: 271px;
 }

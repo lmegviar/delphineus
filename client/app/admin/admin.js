@@ -4,6 +4,7 @@ angular.module('hackSource.admin', [])
     if (result.user.accountRank === 1 || result.user.accountRank === 2) {
       $scope.USER = result.user;
       Data.getAllUsers().then(function(response) {
+      console.log('User result ----> ', response);
         $scope.users = response;
       });
     } else {

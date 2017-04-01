@@ -1,7 +1,8 @@
 <div ng-controller='adminCtrl'>
   <h2 class="adminTitle"><i class="fa fa-lock" aria-hidden="true"></i>Admin Dashboard </h2>
+  <div class="adminSearch"><input ng-model='search' type='text' placeholder=' Search for users'> </input></div>
   <md-list flex-gt-sm="50" id="admin-user-list">
-    <md-list-item ng-repeat="user in users">
+    <md-list-item ng-repeat="user in users | filter:search | orderBy:'-accountRank'">
       <div class="adminBar">
       <img class="card-avatar adminImg" src="{{user.avatarUrl}}">
       <div class="adminName"> <a> @{{user.username}} </a> </div>
