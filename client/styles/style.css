@@ -229,3 +229,7 @@ md-progress-linear {
   position: relative;
   margin-left: 271px;
 }
+
+.clickable:hover {
+  cursor: pointer;
+}
