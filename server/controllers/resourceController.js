@@ -101,7 +101,8 @@ module.exports = {
     Resource.destroy({where: {id: req.query.id}, limit: 1})
     .then(function() {
       res.status(200).send();
-    }).catch(function(err) {
+    })
+    .catch(function(err) {
       res.send(err);
       console.log(err);
     });
@@ -110,6 +111,13 @@ module.exports = {
   addView: function(req, res) {
     Resource.findById(req.body.id).then(function(resource) {
       return resource.increment({'views': 1});
+    })
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.error(err);
     });
   },
 
@@ -233,6 +241,13 @@ module.exports = {
   changeAccountRank: function(req, res) {
     User.findById(req.body.id).then(function(user) {
       return user.update({'accountRank': req.body.accountRank});
+    })
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.error(err);
     });
   }
 };
