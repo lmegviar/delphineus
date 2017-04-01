@@ -1,6 +1,6 @@
 angular.module('hackSource.addResource', ['ngMaterial'])
 
-.controller('AddResourceController', function($scope, $mdDialog, User) {
+.controller('AddResourceController', function($scope, $mdDialog, User, $http) {
   $scope.customFullscreen = false;
 
   $scope.loggedIn = false;
@@ -48,6 +48,27 @@ angular.module('hackSource.addResource', ['ngMaterial'])
       }
       $scope.selectedTab++;
     };
+
+     $scope.filesChanged = function(elm){
+      $scope.files = elm.files
+      $scope.$apply();
+    }
+    $scope.upload = function() {
+      var fd = new FormData()
+      angular.forEach($scope.files, function(file){
+        fd.append('file', file);
+      })
+      $http.post('api/load/file', fd,
+      {
+        transformRequest: angular.identity,
+        headers:{'Content-Type':undefined}
+      })
+      .success(function(d) {
+        console.log(d);
+        $scope.url = 'https://storage.googleapis.com/hacksource/' + d; //this is the url where the file is saved, since we accept all file types they're all encrypted 8bit octet-stream, so when accessing the URL it gets downloaded and your computer recognizes and automatically decodes/crypts it to the correct file format
+      })
+    }
+
 
     getMeta = function(url) {
       $scope.data = {
@@ -109,4 +130,18 @@ angular.module('hackSource.addResource', ['ngMaterial'])
       );
     }
   };
-});
+})
+.directive('fileInput',['$parse', function($parse){
+  return {
+    restrict:'A',
+    link:function(scope, elm, attrs){
+      elm.bind('change', function(){
+        $parse(attrs.fileInput)
+        .assign(scope, elm[0].files)
+        scope.$apply()
+      })
+    }
+  }
+}]);
+
+
