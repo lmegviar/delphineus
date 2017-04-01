@@ -126,3 +126,30 @@ md-sidenav button.md-button {
 .loginLink:hover {
   color:rgb(121, 134, 203);
 }
+
+.fa-minus {
+  positive: relative;
+  float: left;
+  margin-top: 15px;
+  color: grey;
+}
+
+.fa-plus {
+  positive: relative;
+  float: right;
+  margin-top: 15px;
+  color: grey;
+}
+
+.slider {
+  position: relative;
+  float: none;
+  width: 85%;
+  display: inline-flex;
+  padding-left: 20px;
+}
+
+.voteSlider{
+  width: 95%;
+  margin-left: 11px;
+}
