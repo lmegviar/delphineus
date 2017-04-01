@@ -28,6 +28,8 @@ md-card.card-wrapper.ng-scope._md.md-default-theme {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  text-align: center;
+  font-size: 100px;
 }
 
 .card-content {
@@ -116,4 +118,44 @@ md-progress-linear {
 
 .socialbtn:hover {
   cursor: pointer;
+}
+
+.fa-camera-retro {
+  margin-top: 50px;
+}
+
+.loginLink {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.loginLink:hover {
+  color:rgb(121, 134, 203);
+}
+
+.fa-minus {
+  positive: relative;
+  float: left;
+  margin-top: 15px;
+  color: grey;
+}
+
+.fa-plus {
+  positive: relative;
+  float: right;
+  margin-top: 15px;
+  color: grey;
+}
+
+.slider {
+  position: relative;
+  float: none;
+  width: 85%;
+  display: inline-flex;
+  padding-left: 20px;
+}
+
+.voteSlider{
+  width: 95%;
+  margin-left: 11px;
 }

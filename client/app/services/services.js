@@ -1,6 +1,6 @@
 angular.module('hackSource.services', [])
 
-.factory('Data', function($http) {
+.factory('Data', function($http, $location, $route) {
 
   // GET all Resources
   var getAllResources = function () {
@@ -75,6 +75,9 @@ angular.module('hackSource.services', [])
       method: 'POST',
       url: '/api/resources',
       data: JSON.stringify(data)
+    })
+    .then(function () {
+      $route.reload();
     });
   };
 
