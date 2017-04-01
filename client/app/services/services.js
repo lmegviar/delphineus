@@ -81,11 +81,11 @@ angular.module('hackSource.services', [])
     });
   };
 
-  var deleteResource = function(data) {
+  var deleteResource = function(data, callback) {
     $http({
       method: 'DELETE',
       url: '/api/resources?id=' + data.id
-    });
+    }).then(callback);
   };
 
   var addView = function(data) {

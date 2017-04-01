@@ -98,7 +98,13 @@ module.exports = {
   },
 
   deleteResource: function(req, res) {
-    Resource.destroy({where: {id: req.query.id}, limit: 1});
+    Resource.destroy({where: {id: req.query.id}, limit: 1})
+    .then(function() {
+      res.status(200).send();
+    }).catch(function(err) {
+      res.send(err);
+      console.log(err);
+    });
   },
 
   addView: function(req, res) {
