@@ -17,8 +17,11 @@
 <!-- Vote: {{resource.Likes.length}} -->
 </md-button>
 
-
-<md-slider  md-discrete ng-model="positivityPercentage" aria-label="green" id="green-slider" ng-disabled="true" ng-model="color.green" step="1" min="0" max="10">
+<div class="voteSlider">
+<i class="fa fa-minus" aria-hidden="true"></i>
+<md-slider  md-discrete class="slider" ng-model="positivityPercentage" aria-label="green" id="green-slider" ng-disabled="true" ng-model="color.green" step="1" min="0" max="10">
 </md-slider>
+<i class="fa fa-plus" aria-hidden="true"></i>
+</div>
 
 

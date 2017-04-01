@@ -1,0 +1,10 @@
+{
+  "name": "hacksourceext",
+  "version": "1.0.0",
+  "description": "Chrome extension for Hack Source",
+  "main": "server/server.js",
+  "scripts": {},
+  "devDependencies": {
+    "gulp-uglify": "^2.1.2"
+  }
+}
