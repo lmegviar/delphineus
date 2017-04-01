@@ -1,12 +1,10 @@
 <md-content>
   <md-chips>
-    <md-chip>
-      <span
-        ng-model="selectedTag"
-        ng-click="setSearchTag('')">all</span>
+    <md-chip ng-click="setSearchTag('')">
+      all
     </md-chip>
-    <md-chip ng-repeat="tag in taglist">
-      <span ng-model="selectedTag" ng-click="setSearchTag(tag.title)">{{tag.title}}</span>
+    <md-chip ng-repeat="tag in taglist" ng-click="setSearchTag(tag.title)">
+      {{tag.title}}
     </md-chip>
   </md-chips>
 </md-content>

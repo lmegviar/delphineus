@@ -152,7 +152,7 @@ angular.module('hackSource.services', [])
   };
 })
 
-.filter('filterByCat', function () {
+.filter('filterByCat', function (User) {
   return function (items, searchCat) {
     var filtered = [];
 
@@ -160,10 +160,8 @@ angular.module('hackSource.services', [])
       return items;
     }
 
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i];
+    items.forEach(function(item) {
       var itemCats = [];
-
       item.Categories.forEach(function(cat) {
         itemCats.push(cat.title);
       });
@@ -171,7 +169,7 @@ angular.module('hackSource.services', [])
       if (itemCats.indexOf(searchCat) !== -1) {
         filtered.push(item);
       }
-    }
+    });
     return filtered;
   };
 })
@@ -183,8 +181,7 @@ angular.module('hackSource.services', [])
       return items;
     }
 
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i];
+    items.forEach(function(item) {
       var itemTags = [];
 
       item.Tags.forEach(function(tag) {
@@ -194,7 +191,7 @@ angular.module('hackSource.services', [])
       if (itemTags.indexOf(searchTag) !== -1) {
         filtered.push(item);
       }
-    }
+    });
     return filtered;
   };
 });
