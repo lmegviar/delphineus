@@ -45,7 +45,8 @@ angular.module('hackSource.cards', ['infinite-scroll', '720kb.socialshare'])
 
   $scope.deleteResource = function(id, title) {
     if (confirm('Delete resource "' + title + '"?')) {
-      Data.deleteResource({id: id}, function() {
+      Data.deleteResource({id: id})
+      .then(function() {
         $route.reload();
       });
     }
