@@ -38,6 +38,7 @@ md-card.card-wrapper.ng-scope._md.md-default-theme {
   width: auto;
   height: 200px;
   padding: 0 .5rem;
+  margin-bottom: 1rem;
 }
 .card-sbar {
 /*  display: inline-block;
@@ -134,17 +135,14 @@ md-progress-linear {
 }
 
 .fa-minus {
-  positive: relative;
   float: left;
-  margin-top: 15px;
   color: grey;
 }
 
 .fa-plus {
-  positive: relative;
   float: right;
-  margin-top: 15px;
   color: grey;
+  margin-top: -.4rem;
 }
 
 .slider {
