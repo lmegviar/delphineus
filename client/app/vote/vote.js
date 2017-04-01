@@ -43,14 +43,6 @@ angular.module('hackSource.vote', [])
 .controller('VoteCtrl', function($scope, counter, User) {
 	$scope.flagVariable = false;
 	var userId;
-	$scope.slider = {
-    value: 50,
-    options: {
-      floor: 0,
-      ceil: 100,
-      readOnly: true
-    }
-  };
 	var resourceId = $scope.resource.id
 	User.checkLoggedIn().then(function(user) {
 		if (user.user.id === undefined) {
@@ -60,19 +52,20 @@ angular.module('hackSource.vote', [])
 	.then(function() {
 		$scope.vote = $scope.resource.Likes.length;
 		$scope.dvote = $scope.resource.Dislikes.length;
-		$scope.positivityPercentage = Math.floor(10 * ($scope.vote/($scope.vote+$scope.dvote)));
+		$scope.positivityPercentage = Math.floor(100 * ($scope.vote/($scope.vote+$scope.dvote)));
 		console.log($scope.positivityPercentage)
 		if ($scope.resource.Likes.filter(like => like.UserId === userId).length > 0 || $scope.resource.Dislikes.filter(dislike => dislike.UserId === userId).length > 0) {
 			$scope.flagVariable = true;
 		}
 	});
 
+	console.log($scope.positivityPercentage);
 	$scope.upVote = function() {
 
 		if (!$scope.flagVariable) {
 
 			$scope.vote++;
-			$scope.positivityPercentage = Math.floor(10 * ($scope.vote/($scope.vote+$scope.dvote)));
+			$scope.positivityPercentage = Math.floor(100 * ($scope.vote/($scope.vote+$scope.dvote)));
 			$scope.flagVariable = true;
 			counter.addLikes(resourceId, userId)
 			.then(function(data) {
@@ -89,7 +82,7 @@ angular.module('hackSource.vote', [])
 		if (!$scope.flagVariable) {
 
 			$scope.dvote++;
-			$scope.positivityPercentage = Math.floor(10 * ($scope.vote/($scope.vote+$scope.dvote)));
+			$scope.positivityPercentage = Math.floor(100 * ($scope.vote/($scope.vote+$scope.dvote)));
 			$scope.flagVariable = true;
 			counter.addDislikes(resourceId, userId)
 			.then(function(data) {
@@ -113,5 +106,3 @@ angular.module('hackSource.vote', [])
 		controller: 'VoteCtrl'
 	}
 });
-
-

@@ -16,7 +16,7 @@
 md-card.card-wrapper.ng-scope._md.md-default-theme {
   display: inline-table;
   width: 95%;
-  margin-left: 20px;
+  margin: 0 0 1rem 1rem;
 }
 
 .card-image {
@@ -24,26 +24,20 @@ md-card.card-wrapper.ng-scope._md.md-default-theme {
   float: left;
   width: 250px;
   height: 200px;
-  margin-left: 7px;
-  margin-right: 20px;
-
+  margin: .5rem 1rem .5rem .5rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
   font-size: 100px;
 }
-.card-title {
-  margin-left: 7px;
-
-}
-
 
 .card-content {
 /*  display: inline-block;
-*/  margin-left: 20px;
+*/
   width: auto;
   height: 200px;
+  padding: 0 .5rem;
 }
 .card-sbar {
 /*  display: inline-block;
@@ -53,8 +47,8 @@ md-card.card-wrapper.ng-scope._md.md-default-theme {
 }
 
 .card-category {
-  margin-top: -10px;
-  padding: 2px 7px 2px 7px;
+  vertical-align: baseline;
+  padding: .25rem .5rem;
   background-color: rgb(224,224,224);
   border-radius: 10px;
   font-size: 14px;
@@ -75,6 +69,10 @@ md-card.card-wrapper.ng-scope._md.md-default-theme {
   font-size: 12px;
 }
 
+md-card-footer {
+  padding: 0;
+}
+
 md-sidenav.md-locked-open,
 md-sidenav.md-locked-open-add,
 md-sidenav.md-locked-open-remove,
@@ -82,12 +80,16 @@ md-sidenav.md-locked-open-remove.md-closed,
 md-sidenav.md-locked-open.md-closed,
 md-sidenav.md-locked-open.md-closed.md-sidenav-left,
 md-sidenav.md-locked-open.md-closed.md-sidenav-right {
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 
 md-sidenav button.md-button {
   width: 100%;
   text-align: left;
+}
+
+md-progress-linear {
+  margin: .5rem 0;
 }
 
 @media only screen and (max-width: 860px) {
@@ -98,7 +100,7 @@ md-sidenav button.md-button {
     padding: 15px;
   }
 
-  header .md-button.add-resource {
+  header .md-button {
     margin-bottom: 10px;
   }
 
@@ -112,6 +114,10 @@ md-sidenav button.md-button {
   padding: 10px;
   margin: 6px;
   min-width: 15px;
+}
+
+.socialbtn:hover {
+  cursor: pointer;
 }
 
 .fa-camera-retro {

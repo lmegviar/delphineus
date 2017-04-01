@@ -16,9 +16,6 @@
       md-search-text="searchText"
       md-items="item in querySearch(searchText)"
       md-item-text="item.title"
-      md-require-match
-      md-delay="300"
-      ng-change="change(text)"
       md-floating-label="Search">
         <div type="search" layout="row" class="item" layout-align="start center">
           <span md-highlight-text="searchText">{{item.title}}</span>
