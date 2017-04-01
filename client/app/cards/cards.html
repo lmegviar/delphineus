@@ -11,50 +11,29 @@
 
 
     <i ng-if="user.accountRank === 1 || user.accountRank === 2" ng-click="deleteResource(resource.id, resource.title)" class="fa fa-times pull-right" aria-hidden="true"></i>
-    <h2 class="card-title">{{resource.title}}</h2>
-    <div class="card-image" ng-style="{'background-image': 'url({{resource.imgUrl}})'}"></div>
-    <div class="card-content">
-      <p><span class="card-category">{{resource.Categories[0].title}}</span></p>
-      <!-- <h2>{{resource.title}}</h2> -->
-      <p>{{resource.summary}}</p>
+    <div layout="row">
+      <div class="card-image" layout='column' ng-style="{'background-image': 'url({{resource.imgUrl}})'}"></div>
+      <div class="card-content">
+        <h2 class="card-title">{{resource.title}}</h2>
+        <!-- <h2>{{resource.title}}</h2> -->
+        <p>{{resource.summary}}</p>
+        <!-- <p><span class="card-category">{{resource.Categories[0].title}}</span></p> -->
 
-
-
-
-      <div class="card-sbar" layout='row' layout-xs="column" ng-show="displaySosh">
-      <div href="#"
-      class="socialbtn"
-     socialshare
-     socialshare-provider="facebook"
-     socialshare-url={{resource.url}}> <i  class="fa fa-facebook"></i>
-
-     </div>
-     <div href="#"
-      class="socialbtn"
-     socialshare
-     socialshare-provider="twitter"
-     socialshare-url={{resource.url}}> <i class="fa fa-twitter"></i>
-     </div>
-     <div href="#"
-      class="socialbtn"
-     socialshare
-     socialshare-provider="linkedin"
-     socialshare-url={{resource.url}}> <i class="fa fa-linkedin"></i>
-     </div>
-     <div href="#"
-      class="socialbtn"
-     socialshare
-     socialshare-provider="tumblr"
-     socialshare-url={{resource.url}}> <i class="fa fa-tumblr"></i>
-     </div>
-     <div href="#"
-      class="socialbtn"
-     socialshare
-     socialshare-provider="weibo"
-     socialshare-url={{resource.url}}> <i class="fa fa-weibo"></i>
-     </div>
+      </div>
+      <div class="card-sbar" layout="column" ng-show="displaySosh">
+        <div href="#" class="socialbtn" socialshare socialshare-provider="facebook" socialshare-url={{resource.url}}> <i  class="fa fa-facebook"></i>
+        </div>
+        <div href="#" class="socialbtn" socialshare socialshare-provider="twitter" socialshare-url={{resource.url}}> <i class="fa fa-twitter"></i>
+        </div>
+         <div href="#" class="socialbtn" socialshare socialshare-provider="linkedin" socialshare-url={{resource.url}}> <i class="fa fa-linkedin"></i>
+         </div>
+         <div href="#" class="socialbtn" socialshare socialshare-provider="tumblr" socialshare-url={{resource.url}}> <i class="fa fa-tumblr"></i>
+         </div>
+         <div href="#" class="socialbtn" socialshare socialshare-provider="weibo" socialshare-url={{resource.url}}> <i class="fa fa-weibo"></i>
+         </div>
+       </div>
     </div>
-    </div>
+
     <md-divider></md-divider>
     <md-card-footer
       layout="row"

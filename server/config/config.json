@@ -1,12 +1,8 @@
 {
   "development": {
-    "username": "root",
+    "username": "",
     "password": null,
-<<<<<<< HEAD
-    "database": "database_test",
-=======
     "database": "",
->>>>>>> Just testing stuff; nothing really stuck
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
@@ -20,5 +16,4 @@
   "production": {
     "use_env_variable": "DATABASE_URL"
   }
-
 }

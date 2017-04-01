@@ -18,7 +18,5 @@
 </md-button>
 
 
-<md-slider  md-discrete ng-model="positivityPercentage" aria-label="green" id="green-slider" ng-disabled="true" ng-model="color.green" step="1" min="0" max="10">
+<md-progress-linear md-mode="determinate" value="{{positivityPercentage}}" ng-disabled ng-class="+{{positivityPercentage}} > +50 ? 'positive' : 'not-so-positive'">
 </md-slider>
-
-
