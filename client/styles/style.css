@@ -155,7 +155,71 @@ md-progress-linear {
   padding-left: 20px;
 }
 
-.voteSlider{
+.voteSlider {
   width: 95%;
   margin-left: 11px;
+}
+
+.fa-times {
+  padding: 9px 12px;
+  color: grey;
+}
+
+.fa-times:hover {
+  color: red;
+}
+
+.adminBar {
+  padding-top: 5px;
+}
+
+.adminName {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-top: 30px;
+  width: 100px;
+  display: inline-block;
+  color: rgb(63,81,181);
+}
+
+.adminRank {
+  display: inline-block;
+  position: relative;
+  padding-left: 230px;
+}
+
+.adminRank a {
+  font-weight: 600px;
+  color: grey;
+}
+
+.adminImg {
+  height: 80px;
+  width: 80px;
+  margin-left: 15px;
+}
+
+.toggleMod {
+  margin-left: 25px;
+  margin-top: 20px;
+  display: inline-block;
+  position: reltaive;
+  float: right;
+}
+
+.toggleModButton {
+  margin-bottom: 20px;
+}
+
+.adminTitle{
+  margin: 12px 17px;
+  font-size: 24px;
+  color: #A9A9A9;
+}
+
+.fa-lock {
+  font-size: 27px;
+  margin-right: 8px;
 }
