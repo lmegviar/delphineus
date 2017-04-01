@@ -1,4 +1,4 @@
-angular.module('hackSource.addResource', ['ngMaterial'])
+angular.module('hackSource.addResource', ['ngMaterial', 'ngSanitize'])
 
 .controller('AddResourceController', function($scope, $mdDialog, User) {
   $scope.customFullscreen = false;
@@ -102,7 +102,7 @@ angular.module('hackSource.addResource', ['ngMaterial'])
           .parent(angular.element(document.querySelector('#popupContainer')))
           .clickOutsideToClose(true)
           .title('You are not logged in')
-          .textContent('Please log in to post your resource.')
+          .htmlContent('<a>Please <a href="/auth/github" class="loginLink">log in</a> to post your resource.</a>')
           .ariaLabel('Please log in')
           .ok('Got it!')
           .targetEvent(ev)

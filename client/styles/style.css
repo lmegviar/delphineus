@@ -117,3 +117,12 @@ md-sidenav button.md-button {
 .fa-camera-retro {
   margin-top: 50px;
 }
+
+.loginLink {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.loginLink:hover {
+  color:rgb(121, 134, 203);
+}
