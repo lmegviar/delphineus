@@ -5,6 +5,12 @@ angular.module('hackSource.cards', ['infinite-scroll', '720kb.socialshare'])
     .then(function(data) {
       $scope.allData = data.reverse(); //$scope.data
       $scope.data = $scope.allData.slice(0, 2);
+      data.forEach((resource) => {
+        if (resource.imgUrl === 'https://i.stack.imgur.com/Mmww2.png') {
+          $scope.defaultImg = true;
+          console.log('Scope.defaultImg ===', $scope.defaultImg);
+        }
+      })
     });
 
   User.checkLoggedIn().then(function(result) {
