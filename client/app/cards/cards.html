@@ -6,8 +6,8 @@
       md-theme-watch
       ng-repeat='resource in data | filterByCat:search.category | filterByTag:search.tag | filter:searchText'>
     <i ng-if="user.accountRank === 1 || user.accountRank === 2" ng-click="deleteResource(resource.id, resource.title)" class="fa fa-times pull-right" aria-hidden="true"></i>
+
     <div layout="row">
-      <div class="card-image" layout='column' ng-style="{'background-image': 'url({{resource.imgUrl}})'}"></div>
       <div class="card-content">
         <div ng-if="resource.defaultImg" class="card-image" ng-style="{'background-color': '{{resource.color}}'}"><i class="fa fa-camera-retro"></i></div>
         <div ng-if="!resource.defaultImg" class="card-image" ng-style="{'background-image': 'url({{resource.imgUrl}})'}"></div>
@@ -15,20 +15,20 @@
         <!-- <h2>{{resource.title}}</h2> -->
         <p>{{resource.summary}}</p>
         <!-- <p><span class="card-category">{{resource.Categories[0].title}}</span></p> -->
+        <div class="card-sbar" layout="row" ng-show="displaySosh">
+          <div href="#" class="socialbtn" socialshare socialshare-provider="facebook" socialshare-url={{resource.url}}> <i  class="fa fa-facebook"></i>
+          </div>
+          <div href="#" class="socialbtn" socialshare socialshare-provider="twitter" socialshare-url={{resource.url}}> <i class="fa fa-twitter"></i>
+          </div>
+           <div href="#" class="socialbtn" socialshare socialshare-provider="linkedin" socialshare-url={{resource.url}}> <i class="fa fa-linkedin"></i>
+           </div>
+           <div href="#" class="socialbtn" socialshare socialshare-provider="tumblr" socialshare-url={{resource.url}}> <i class="fa fa-tumblr"></i>
+           </div>
+           <div href="#" class="socialbtn" socialshare socialshare-provider="weibo" socialshare-url={{resource.url}}> <i class="fa fa-weibo"></i>
+           </div>
+         </div>
 
       </div>
-      <div class="card-sbar" layout="column" ng-show="displaySosh">
-        <div href="#" class="socialbtn" socialshare socialshare-provider="facebook" socialshare-url={{resource.url}}> <i  class="fa fa-facebook"></i>
-        </div>
-        <div href="#" class="socialbtn" socialshare socialshare-provider="twitter" socialshare-url={{resource.url}}> <i class="fa fa-twitter"></i>
-        </div>
-         <div href="#" class="socialbtn" socialshare socialshare-provider="linkedin" socialshare-url={{resource.url}}> <i class="fa fa-linkedin"></i>
-         </div>
-         <div href="#" class="socialbtn" socialshare socialshare-provider="tumblr" socialshare-url={{resource.url}}> <i class="fa fa-tumblr"></i>
-         </div>
-         <div href="#" class="socialbtn" socialshare socialshare-provider="weibo" socialshare-url={{resource.url}}> <i class="fa fa-weibo"></i>
-         </div>
-       </div>
     </div>
 
     <md-divider></md-divider>
@@ -40,6 +40,7 @@
         <img class="card-avatar" ng-src={{resource.User.avatarUrl}} />
         <span class="card-post-data">@{{resource.User.username}} | {{resource.createdAt | date:'MMMM d, yyyy'}}</span>
       </div>
+
       <div layout-align="end center">
         <md-button
           ng-mousedown="addView(resource.id)"
