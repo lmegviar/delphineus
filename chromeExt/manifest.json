@@ -3,7 +3,7 @@
 
   "name": "HackSource Resource Creator",
   "description": "This extension allows users to add a resource to HackSource from any tab",
-  "version": "7.0",
+  "version": "8.0",
 
   "browser_action": {
     "default_icon": "icon.png",
