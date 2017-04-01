@@ -11,7 +11,9 @@ router.put('/resource-view', resourceController.addView);
 router.post('/opengraph', resourceController.getOpenGraph);
 
 router.post('/likes', resourceController.postLike);
+router.delete('/likes', resourceController.deleteLike);
 router.post('/dislikes', resourceController.postDislike);
+router.delete('/dislikes', resourceController.deleteDislike);
 
 router.get('/bookmarks', resourceController.getBookmarks);
 router.get('/categories', resourceController.getCategories);

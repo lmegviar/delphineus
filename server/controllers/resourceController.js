@@ -134,6 +134,24 @@ module.exports = {
       console.error(err);
     });
   },
+
+  deleteLike: function(req, res) {
+    Like.destroy({
+      where: {
+        ResourceId: req.query.resourceId,
+        UserId: req.query.userId
+      },
+      limit: 1
+    })
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.error(err);
+    })
+  },
+
   postDislike: function(req, res) {
     Dislike.create({
       ResourceId: req.body.resourceId,
@@ -146,6 +164,23 @@ module.exports = {
       res.send(err);
       console.error(err);
     });
+  },
+
+  deleteDislike: function(req, res) {
+    Dislike.destroy({
+      where: {
+        ResourceId: req.query.resourceId,
+        UserId: req.query.userId
+      },
+      limit: 1
+    })
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.error(err);
+    })
   },
 
   getCategories: function(req, res) {
