@@ -25,11 +25,13 @@ md-card.card-wrapper.ng-scope._md.md-default-theme {
   width: 250px;
   height: 200px;
   margin-left: 7px;
-    margin-right: 7px;
+  margin-right: 20px;
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  text-align: center;
+  font-size: 100px;
 }
 .card-title {
   margin-left: 7px;
@@ -112,3 +114,6 @@ md-sidenav button.md-button {
   min-width: 15px;
 }
 
+.fa-camera-retro {
+  margin-top: 50px;
+}
