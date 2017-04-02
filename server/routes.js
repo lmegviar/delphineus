@@ -1,5 +1,8 @@
 var router = require('express').Router();
 var resourceController = require('./controllers/resourceController.js');
+var fileController = require('./controllers/addFileController.js');
+
+router.post('/load/file', fileController.addFile);
 
 router.get('/resources', resourceController.getResources);
 router.post('/resources', resourceController.postResource);
@@ -17,6 +20,8 @@ router.post('/tags', resourceController.postTag);
 router.get('/users', resourceController.getUsers);
 router.get('/most-popular-tags', resourceController.getMostPopularTags);
 router.put('/user-account-rank', resourceController.changeAccountRank);
+
+
 
 
 module.exports = router;
