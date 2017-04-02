@@ -29,6 +29,3 @@ bower_components/
 # Private Keys
 server/config/github-config.js
 
-/google-cloud-storage-key.json
-
-google-cloud-storage-key.json
