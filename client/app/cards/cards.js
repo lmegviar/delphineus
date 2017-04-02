@@ -1,5 +1,5 @@
 angular.module('hackSource.cards', ['infinite-scroll', '720kb.socialshare'])
-.controller('cardsCtrl', function($scope, Data, User) {
+.controller('cardsCtrl', function($scope, $route, Data, User) {
 
   var generateColor = function() {
     var palette = ['#FF8A65', '#7986CB', '#3F51B5', '#E0E0E0'];
@@ -45,7 +45,10 @@ angular.module('hackSource.cards', ['infinite-scroll', '720kb.socialshare'])
 
   $scope.deleteResource = function(id, title) {
     if (confirm('Delete resource "' + title + '"?')) {
-      Data.deleteResource({id: id});
+      Data.deleteResource({id: id})
+      .then(function() {
+        $route.reload();
+      });
     }
   };
 

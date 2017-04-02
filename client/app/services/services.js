@@ -82,14 +82,14 @@ angular.module('hackSource.services', [])
   };
 
   var deleteResource = function(data) {
-    $http({
+    return $http({
       method: 'DELETE',
       url: '/api/resources?id=' + data.id
     });
   };
 
   var addView = function(data) {
-    $http({
+    return $http({
       method: 'PUT',
       url: '/api/resource-view',
       data: JSON.stringify(data)
@@ -108,7 +108,7 @@ angular.module('hackSource.services', [])
   };
 
   var changeAccountRank = function(data) {
-    $http({
+    return $http({
       method: 'PUT',
       url: '/api/user-account-rank',
       data: JSON.stringify(data)

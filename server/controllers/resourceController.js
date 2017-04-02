@@ -98,12 +98,26 @@ module.exports = {
   },
 
   deleteResource: function(req, res) {
-    Resource.destroy({where: {id: req.query.id}, limit: 1});
+    Resource.destroy({where: {id: req.query.id}, limit: 1})
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.log(err);
+    });
   },
 
   addView: function(req, res) {
     Resource.findById(req.body.id).then(function(resource) {
       return resource.increment({'views': 1});
+    })
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.error(err);
     });
   },
 
@@ -120,6 +134,24 @@ module.exports = {
       console.error(err);
     });
   },
+
+  deleteLike: function(req, res) {
+    Like.destroy({
+      where: {
+        ResourceId: req.query.resourceId,
+        UserId: req.query.userId
+      },
+      limit: 1
+    })
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.error(err);
+    })
+  },
+
   postDislike: function(req, res) {
     Dislike.create({
       ResourceId: req.body.resourceId,
@@ -132,6 +164,23 @@ module.exports = {
       res.send(err);
       console.error(err);
     });
+  },
+
+  deleteDislike: function(req, res) {
+    Dislike.destroy({
+      where: {
+        ResourceId: req.query.resourceId,
+        UserId: req.query.userId
+      },
+      limit: 1
+    })
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.error(err);
+    })
   },
 
   getCategories: function(req, res) {
@@ -227,6 +276,13 @@ module.exports = {
   changeAccountRank: function(req, res) {
     User.findById(req.body.id).then(function(user) {
       return user.update({'accountRank': req.body.accountRank});
+    })
+    .then(function() {
+      res.status(200).send();
+    })
+    .catch(function(err) {
+      res.send(err);
+      console.error(err);
     });
   }
 };
