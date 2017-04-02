@@ -158,13 +158,13 @@ md-progress-linear {
   margin-left: 11px;
 }
 
-.fa-times {
-  padding: 9px 12px;
+.fa-window-close {
   color: grey;
 }
 
-.fa-times:hover {
+.clickable:hover {
   color: red;
+  cursor: pointer;
 }
 
 .adminBar {
@@ -228,8 +228,4 @@ md-progress-linear {
   display: inline-block;
   position: relative;
   margin-left: 271px;
-}
-
-.clickable:hover {
-  cursor: pointer;
 }
