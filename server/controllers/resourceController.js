@@ -41,6 +41,9 @@ module.exports = {
   },
 
   postResource: function(req, res) {
+    if (req.body.tags === undefined) {
+      req.body.tags = ['untagged'];
+    }
     var currentTagTitles = [];
     var tagsToCreate = [];
     Tag.findAll()
