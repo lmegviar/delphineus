@@ -10,8 +10,8 @@
 
     <div layout="row" class="upperCard">
       <div class="card-content">
-        <div ng-if="resource.defaultImg" class="card-image" ng-style="{'background-color': '{{resource.color}}'}"><i class="fa fa-camera-retro"></i></div>
         <div ng-if="!resource.defaultImg" class="card-image" ng-style="{'background-image': 'url({{resource.imgUrl}})'}"></div>
+        <div ng-if="resource.defaultImg" class="card-image defaultImg" ng-style="{'background-color': '{{resource.color}}'}"><i class="fa fa-camera-retro"></i></div>
         <h2 class="card-title">{{resource.title}}</h2>
         <!-- <h2>{{resource.title}}</h2> -->
         <p>{{resource.summary}}</p>

@@ -11,7 +11,8 @@ angular.module('hackSource.cards', ['infinite-scroll', '720kb.socialshare'])
   Data.getAllResources()
     .then(function(data) {
       $scope.allData = data.reverse(); //$scope.data
-      $scope.data = $scope.allData.slice(0, 2);
+      // $scope.data = $scope.allData.slice(0, 2);
+      $scope.data = $scope.allData;
       data.forEach((resource, index) => {
         if (resource.imgUrl === 'https://i.stack.imgur.com/Mmww2.png') {
           resource.defaultImg = true;
@@ -19,7 +20,6 @@ angular.module('hackSource.cards', ['infinite-scroll', '720kb.socialshare'])
         } else {
           resource.defaultImg = false;
         }
-          console.log('Resource --> ', resource);
       })
     });
 

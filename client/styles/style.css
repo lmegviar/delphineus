@@ -33,9 +33,7 @@ md-card.card-wrapper.ng-scope._md.md-default-theme {
 }
 
 .card-content {
-/*  display: inline-block;
-*/
-  width: auto;
+  width: 100%;
   height: 200px;
   padding: 0 .5rem;
   margin-bottom: 1rem;
@@ -231,7 +229,7 @@ md-progress-linear {
 }
 
 .upperCard {
-  display: table-caption ! important;
+/*  display: table-caption ! important;*/
 }
 
 .uploadFile {
@@ -245,4 +243,8 @@ md-progress-linear {
   font-weight: 500;
   margin: inherit;
   color: rgba(255,255,255,0.87);
+}
+
+.defaultImg {
+
 }
