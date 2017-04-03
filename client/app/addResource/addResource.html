@@ -19,12 +19,12 @@
                <label>Enter URL</label>
                <input type="url" ng-model="url">
             </md-input-container>
-            <label>Or upload file</label>
+<!--             <h3 class="uploadFile">Upload file</h3> -->
             <md-input-container class="md-block">
                <label></label>
-               <input type="file" file-input="files" id>
-               <li id="thisFile" ng-repeat="file in files">{{file.name}}</li>
-               <button ng-click="upload()">Upload</button>
+               <input type="file" file-input="files">
+               <li id="thisFile" ng-repeat="file in files" >{{file.name}}</li>
+               <button ng-click="upload()" class="upload">Upload</button>
             </md-input-container>
 
 

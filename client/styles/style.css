@@ -229,3 +229,20 @@ md-progress-linear {
   position: relative;
   margin-left: 271px;
 }
+
+.upperCard {
+  display: table-caption ! important;
+}
+
+.uploadFile {
+
+}
+
+.upload {
+  background-color: rgb(63,81,181);
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin: inherit;
+  color: rgba(255,255,255,0.87);
+}

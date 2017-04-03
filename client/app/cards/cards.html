@@ -1,13 +1,14 @@
-<div ng-controller='cardsCtrl'><!-- //orderBy:sortType:sortReverse |  -->
+<div ng-controller='cardsCtrl'>
 <div infinite-scroll="loadMore()">
     <md-card class="card-wrapper"
-    ng-mouseenter="displaySosh=true" ng-mouseleave="displaySosh=false"
+      ng-mouseenter="displaySosh=true" ng-mouseleave="displaySosh=false"
       md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}"
       md-theme-watch
-      ng-repeat='resource in data | filterByCat:search.category | filterByTag:search.tag | filter:searchText'>
+      ng-repeat='resource in data | filterByCat:search.category | filterByTag:search.tag | filter:searchText | orderBy: sortType:sortReverse'
+      >
     <i ng-if="user.accountRank === 1 || user.accountRank === 2" ng-click="deleteResource(resource.id, resource.title)" class="fa fa-window-close fa-lg pull-right clickable" aria-hidden="true"></i>
 
-    <div layout="row">
+    <div layout="row" class="upperCard">
       <div class="card-content">
         <div ng-if="resource.defaultImg" class="card-image" ng-style="{'background-color': '{{resource.color}}'}"><i class="fa fa-camera-retro"></i></div>
         <div ng-if="!resource.defaultImg" class="card-image" ng-style="{'background-image': 'url({{resource.imgUrl}})'}"></div>
