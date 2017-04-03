@@ -245,6 +245,6 @@ md-progress-linear {
   color: rgba(255,255,255,0.87);
 }
 
-.defaultImg {
-
+.fa-window-close {
+  margin: 12px 10px;
 }
