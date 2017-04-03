@@ -22,7 +22,7 @@
 <!--             <h3 class="uploadFile">Upload file</h3> -->
             <md-input-container class="md-block">
                <label></label>
-               <input type="file" file-input="files">
+               <input type="file" file-input="files" class="inputBar">
                <li id="thisFile" ng-repeat="file in files" >{{file.name}}</li>
                <button ng-click="upload()" class="upload">Upload</button>
             </md-input-container>
