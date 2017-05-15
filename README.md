@@ -1,6 +1,6 @@
 # HackSource
 
-HackSource: the hacker's library.
+HackSource: the hacker's library
 
 ## Team
 
@@ -55,30 +55,19 @@ Visit our wiki (https://github.com/delphineus/delphineus/wiki) to learn more!
 
 ## Screenshots
 
-<img src="https://cloud.githubusercontent.com/assets/23217560/26076430/bf1ff99c-3986-11e7-80ba-267c649b0df5.png" width="500"/>
 
 <img src="https://cloud.githubusercontent.com/assets/23217560/26076436/c33153fa-3986-11e7-8028-be5db0044ac1.png" width="500"/>
 
 <img src="https://cloud.githubusercontent.com/assets/23217560/26076438/c53b43fe-3986-11e7-8637-1096186fed18.png" width="500"/>
 
-<img src="https://cloud.githubusercontent.com/assets/23217560/26076443/c803a68a-3986-11e7-929c-e0a6354a1fed.png" width="500"/>
-
 <img src="https://cloud.githubusercontent.com/assets/23217560/26076446/c983dcd2-3986-11e7-8f28-a81c35d72ef8.png" width="500"/>
 
 <img src="https://cloud.githubusercontent.com/assets/23217560/26076448/cb4e58b2-3986-11e7-8f38-b12e31ccad9c.png" width="500"/>
-
-<img src="https://cloud.githubusercontent.com/assets/23217560/26076449/cce6c7f4-3986-11e7-8d2b-3aa66ff18b39.png" width="500"/>
-
-<img src="https://cloud.githubusercontent.com/assets/23217560/26076452/ceb15978-3986-11e7-9e5a-66a93835e372.png" width="500"/>
 
 <img src="https://cloud.githubusercontent.com/assets/23217560/26076455/d042ac2e-3986-11e7-8161-ddbb33872d4c.png" width="500"/>
 
 <img src="https://cloud.githubusercontent.com/assets/23217560/26076458/d2a50980-3986-11e7-95a5-3ff42063d6f0.png" width="500"/>
 
 <img src="https://cloud.githubusercontent.com/assets/23217560/26076465/d72c8870-3986-11e7-88c6-b50da6b301d2.png" width="500"/>
-
-<img src="https://cloud.githubusercontent.com/assets/23217560/26076471/dc52bc7a-3986-11e7-9c0e-05eb833ef711.png" width="500"/>
-
-
 
 
